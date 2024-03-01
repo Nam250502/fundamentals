@@ -4,7 +4,6 @@ var cookieParser = require('cookie-parser');
 
 var infoRouter = require('./routes/info');
 var defaultRouter = require('./routes/default');
-var test = require('./routes/test');
 
 var app = express();
 
@@ -15,6 +14,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/info', infoRouter);
 app.use('*', defaultRouter);
-app.use('/test', test);
+
 
 module.exports = app;
